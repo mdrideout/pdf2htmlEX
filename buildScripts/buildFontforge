@@ -45,6 +45,7 @@ cmake        		                        \
   -DENABLE_WRITE_PFM:BOOL=OFF               \
   -DENABLE_SANITIZER:ENUM="none"            \
   -DENABLE_FREETYPE_DEBUGGER:PATH=""        \
+  -DENABLE_GETTEXT:BOOL=OFF                 \
   -DSPHINX_USE_VENV:BOOL=OFF                \
   -DREAL_TYPE:ENUM="double"                 \
   -DTHEME:ENUM="tango"                      \

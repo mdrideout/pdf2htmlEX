@@ -15,9 +15,9 @@ set -ev
 
 cd fontforge
 
-# Fix problematic translations (as of fontforge-20230101)
-echo "Fixing problematic translations fr.po and it.po and more with generic replacement strings"
-sed -i.orig 's/\(%[^%[:space:]]*\)hs/\1s/g' po/fr.po po/it.po
+# # Fix problematic translations (as of fontforge-20230101)
+# echo "Fixing problematic translations fr.po and it.po and more with generic replacement strings"
+# sed -i.orig 's/\(%[^%[:space:]]*\)hs/\1s/g' po/fr.po po/it.po
 
 mkdir build
 

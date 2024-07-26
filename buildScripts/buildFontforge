@@ -15,10 +15,14 @@ set -ev
 
 cd fontforge
 
+# Remove problematic translations (as of fontforge-20230101)
+echo "Removing problematic translations fr.po and it.po"
+rm -rf po/fr.po
+rm -rf po/it.po
+
 mkdir build
 
 cd build
-
 
 cmake        		                        \
   -DCMAKE_BUILD_TYPE=Release                \
@@ -58,11 +62,6 @@ cmake        		                        \
 #  echo "patching fontforge using [$APATCHFILE]" 
 #  patch -p 1 < $APATCHFILE
 #done
-
-# Delete problematic translation files
-echo "Deleting problematic translation files"
-rm -rf fontforge/po/fr.po
-rm -rf fontforge/po/it.po 
 
 make $MAKE_PARALLEL
 

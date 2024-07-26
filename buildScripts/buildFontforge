@@ -16,9 +16,8 @@ set -ev
 cd fontforge
 
 # Remove problematic translations (as of fontforge-20230101)
-echo "Removing problematic translations fr.po and it.po"
-rm -rf po/fr.po
-rm -rf po/it.po
+echo "Fixing problematic translations fr.po and it.po and more with po/*.po"
+sed -i.orig 's/\(%[^%[:space:]]*\)hs/\1s/g' po/*.po
 
 mkdir build
 
